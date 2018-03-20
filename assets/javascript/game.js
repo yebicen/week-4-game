@@ -24,13 +24,15 @@ var imgs =[
 
 
 
-//start the game when user open up the page or refresh the page
 
 
 
+// The random number shown at the start of the game should be between 19 - 120.
+// Each crystal should have a random hidden value between 1 - 12.
 
 //generate the target number
-target = Math.floor(Math.random()*69)+30;
+//Math.floor(Math.random() * (max - min + 1) ) + min;
+target = Math.floor(Math.random()*102+19);
 console.log("the target number is " + target)
 $("#target").html(target);
 
@@ -42,7 +44,7 @@ gameloop();
 function gameloop(){
 //generate 4 random numbers at once using for loop
 for (var i = 0; i < 4; i++) {
-  var randomnumber = Math.floor(Math.random()*12);
+  var randomnumber = Math.floor(Math.random()*12+1);
   console.log(randomnumber);
 
 
